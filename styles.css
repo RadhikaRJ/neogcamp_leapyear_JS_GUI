@@ -4,10 +4,12 @@ body{
     font-family: 'Merriweather', serif;
     display: flex;
     background-image: url(images/leap_year.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container{
    
-    
+    background:transparent;
     color:white;
     padding:5%;
     align-items: center;
