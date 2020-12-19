@@ -15,13 +15,15 @@ body{
 #btn{
     background-color: white;
     color: #24C6DC ;
-    padding:2% 2%;
+    padding:2% 4%;
     border:transparent;
     margin: 2px solid #514A9D;
-    border-top-right-radius: 40%;
-    border-bottom-left-radius: 40%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
     font-size: medium;
     font-style: italic;
+    position: relative;
+    align:center;
 }
 #submit:hover{
     color: white;
@@ -29,16 +31,20 @@ body{
 }
 
 textarea{
-    height:15vh;
+    height:5vh;
     width:50vh;
-    background:white;
-    color:black;
+    background:transparent;
+    color:white;
+    border:2px solid white;
+     
 }
-
-#result{
+::placeholder{
+    color:white;
+}
+#output{
     margin:1% ;
     height:20vh;
     width:50vh;
-    color:black;
-    background-color: white;
+    color:white;
+    background-color:transparent;
 }
