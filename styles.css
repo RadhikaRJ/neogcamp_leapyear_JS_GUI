@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 body{
-    background: #24C6DC;  /* fallback for old browsers */
+    
     font-family: 'Merriweather', serif;
     display: flex;
     background-image: url(images/leap_year.jpg);
