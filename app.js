@@ -26,19 +26,19 @@ function checkInputFormat(ip) {
     var [daycheck, monthcheck, yearcheck] = ip.toString().split("-")
 
     if (monthcheck === null ||
-         monthcheck == " " || 
-         yearcheck == " " || 
+         monthcheck === " " || 
+         yearcheck === " " || 
          yearcheck === null || 
-         isNaN(daycheck) ==true|| 
-         isNaN(monthcheck)==true||
+         isNaN(daycheck) ===true|| 
+         isNaN(monthcheck)===true||
          isNaN(yearcheck)||
          monthcheck <1||
          monthcheck>12||
          daycheck<1||
          daycheck>31||
-         isEmpty(monthcheck)==true||
-         isEmpty(daycheck)==true||
-         isEmpty(yearcheck==true)) {
+         monthcheck==""||
+         daycheck==""||
+         yearcheck=="") {
         return false;
     } else {
 
