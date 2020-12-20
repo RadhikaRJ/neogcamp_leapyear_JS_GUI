@@ -38,7 +38,7 @@ function checkInputFormat(ip) {
          daycheck>31||
          monthcheck==""||
          daycheck==""||
-         yearcheck=="") {
+         yearcheck==""||(monthcheck==2 && daycheck==30)) {
         return false;
     } else {
 
