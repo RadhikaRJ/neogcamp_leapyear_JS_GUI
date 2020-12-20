@@ -35,7 +35,10 @@ function checkInputFormat(ip) {
          monthcheck <1||
          monthcheck>12||
          daycheck<1||
-         daycheck>31) {
+         daycheck>31||
+         isEmpty(monthcheck)==true||
+         isEmpty(daycheck)==true||
+         isEmpty(yearcheck==true)) {
         return false;
     } else {
 
