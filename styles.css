@@ -1,28 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 body{
-    background-color:black;
+    background-color:#0eccb3 ;
     font-family: 'Merriweather', serif;
     display: flex;
-    background-image: url(images/leap_year.jpg);
+    
+    /* background-image: url(images/leap_year.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    padding:2% 25%;
+  
 }
+
+
 .container{
    
-    background:transparent;
-    color:white;
+    background:rgb(255, 255, 128);
+    color:black;
     padding:5%;
     align-items: center;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 20%;
+    height:auto;
+    width: auto;
+    
 
 }
+
+input:invalid{
+    background-color:pink;
+}
+input:valid{
+    background-color:powderblue;
+}
+input + span {
+    position: relative;
+  }
+  
+  input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 1px;
+  }
+  
+  input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:invalid + span::before {
+    content: '✖';
+    color: red;
+  }
+  
+  input:valid + span::before {
+    content: '✓';
+    color: green;
+  }
 #btn{
-    background-color: white;
-    color: #24C6DC ;
+    background-color: rgb(102, 177, 5);
+    color: white ;
     padding:2% 4%;
     border:transparent;
-    margin: 2px solid #514A9D;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
+    margin: 2px solid magenta;
+    
     font-size: medium;
     font-style: italic;
     position: relative;
@@ -30,24 +69,14 @@ body{
 }
 #btn:hover{
     color: white;
-    background-color: #514a9d;
+    background-color: magenta;
 }
 
-textarea{
-    height:5vh;
-    width:20vh;
-    background:white;
-    color:#514A9D;
-    border:2px solid white;
-     
-}
-::placeholder{
-    color:514A9D;
-}
+
 #output{
     margin:1% ;
     height:20vh;
-    width:20vh;
-    color:#514A9D;
-    background-color:white;
+    width:wrap;
+    color:black;
+    background-color:transparent;
 }
