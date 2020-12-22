@@ -1,16 +1,18 @@
 var txtref = document.querySelector("#txt-input");
 var outputref = document.querySelector("#output");
 
+
 var btnref = document.querySelector("#btn");
-btnref.addEventListener("click", clickHandler);
+btnref.addEventListener("click", onClickHandler);
 
-function clickHandler() {
-    var inputText = txtref.value;
-    var formatCheck = checkInputFormat(inputText);
-
+function onClickHandler()
+{
+    var date=document.getElementById("dateip").value;
+    var formatCheck = checkInputFormat(date);
+    
     if (formatCheck == true) {
         
-        var leap = isLeapYear(inputText);
+        var leap = isLeapYear(date);
         if (leap == true) {
             outputref.innerText = "Yes! You are born in a leap year!\n Feel free to share this with your friend circle over social media."
         } else {
@@ -19,11 +21,12 @@ function clickHandler() {
     } else {
         alert("You input is invalid or is not in the required format!\n Required format: DD-MM-YYYY");
     }
-
 }
 
+
+
 function checkInputFormat(ip) {
-    var [daycheck, monthcheck, yearcheck] = ip.toString().split("-")
+    var [yearcheck, monthcheck, daycheck] = ip.toString().split("-")
 
     if (monthcheck === null ||
          monthcheck === " " || 
@@ -47,7 +50,7 @@ function checkInputFormat(ip) {
 }
 
 function isLeapYear(ip) {
-    var [day, month, year] = ip.toString().split("-")
+    var [year, month, day] = ip.toString().split("-")
     if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
 
         return true;
